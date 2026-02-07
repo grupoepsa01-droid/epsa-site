@@ -3,90 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo EPSA - Tiago Santos</title>
+<title>Grupo EPSA</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: #000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0f;
   color: #fff;
-  line-height: 1.6;
 }
 
-/* TOPO */
 header {
-  padding: 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #000, #111);
+  background: #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
   color: gold;
-  font-size: 28px;
+  font-size: 20px;
 }
 
-header p {
-  color: #ccc;
+nav a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
   font-size: 14px;
 }
 
-/* HERO */
 .hero {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .hero h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.hero span {
+  font-size: 28px;
   color: gold;
 }
 
 .hero p {
   max-width: 700px;
-  margin: auto;
+  margin: 10px auto;
   color: #ccc;
 }
 
-/* SOBRE */
-.sobre {
-  padding: 40px 20px;
-  background: #0a0a0a;
-  text-align: center;
-}
-
-.sobre h2 {
-  color: gold;
-  margin-bottom: 10px;
-}
-
-/* EMPRESAS */
-.empresas {
+.section {
   padding: 50px 20px;
   text-align: center;
 }
 
-.empresas h2 {
+.section h3 {
   color: gold;
-  margin-bottom: 30px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.empresas-grid {
+.empresas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.empresa-card {
+.card {
   background: #111;
   padding: 20px;
   border-radius: 12px;
@@ -94,44 +76,39 @@ header p {
   transition: 0.3s;
 }
 
-.empresa-card:hover {
-  transform: translateY(-5px);
+.card:hover {
   border-color: gold;
+  transform: translateY(-5px);
 }
 
-.empresa-card h3 {
+.card h4 {
   color: gold;
   margin-bottom: 8px;
-  font-size: 16px;
 }
 
-.empresa-card p {
+.card p {
   font-size: 13px;
   color: #ccc;
 }
 
-/* RODAPÉ */
 footer {
-  padding: 20px;
   text-align: center;
+  padding: 20px;
   font-size: 12px;
   color: #888;
   background: #000;
 }
 
-/* WHATSAPP */
-.whatsapp-btn {
+.whatsapp {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  background: #25D366;
+  background: #25d366;
   color: white;
-  padding: 10px 16px;
-  border-radius: 40px;
+  padding: 12px 18px;
+  border-radius: 50px;
   text-decoration: none;
-  font-size: 14px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -139,62 +116,66 @@ footer {
 
 <header>
   <h1>Grupo EPSA</h1>
-  <p>Inovação, tecnologia e empreendedorismo</p>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#empresas">Empresas</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Tiago Santos <span>| Empreendedor</span></h2>
+  <h2>Tiago Santos</h2>
   <p>
-    CEO e fundador do Grupo EPSA. Ajudo empreendedores a criar, estruturar
-    e expandir seus negócios com visão estratégica e inovação.
+    Empreendedor, CEO e fundador do Grupo EPSA.  
+    Ajudo empreendedores a abrir, estruturar e expandir seus negócios,
+    com mais de 20 anos de experiência no setor empresarial.
   </p>
 </section>
 
-<section class="sobre">
-  <h2>Sobre</h2>
+<section class="section" id="sobre">
+  <h3>Quem Somos</h3>
   <p>
-    Com mais de 20 anos de experiência no setor empreendedor, Tiago Santos
-    construiu marcas e projetos nos segmentos de tecnologia, moda e serviços.
-    Seu objetivo é transformar ideias em negócios sólidos e lucrativos.
+    O Grupo EPSA é uma holding que conecta inovação, tecnologia, moda e serviços.
+    Criamos empresas modernas, fortes e preparadas para o futuro.
   </p>
 </section>
 
-<section class="empresas">
-  <h2>Empresas</h2>
+<section class="section" id="empresas">
+  <h3>Empresas do Grupo EPSA</h3>
 
-  <div class="empresas-grid">
-    <div class="empresa-card">
-      <h3>NB - New Brother</h3>
+  <div class="empresas">
+    <div class="card">
+      <h4>NB - New Brother</h4>
       <p>Acessórios para celular e tecnologia.</p>
     </div>
 
-    <div class="empresa-card">
-      <h3>P&B Moda Masculina</h3>
-      <p>Moda masculina com estilo e qualidade.</p>
+    <div class="card">
+      <h4>P&B Moda Masculina</h4>
+      <p>Moda masculina premium e original.</p>
     </div>
 
-    <div class="empresa-card">
-      <h3>P&B Moda Feminina</h3>
-      <p>Moda feminina moderna e acessível.</p>
+    <div class="card">
+      <h4>P&B Moda Feminina</h4>
+      <p>Moda feminina moderna e estilosa.</p>
     </div>
 
-    <div class="empresa-card">
-      <h3>Lava & Brilha</h3>
-      <p>Lava rápido e estética automotiva.</p>
+    <div class="card">
+      <h4>Lava & Brilha</h4>
+      <p>Lava rápido e estética automotiva profissional.</p>
     </div>
 
-    <div class="empresa-card">
-      <h3>Gordão U.S.A</h3>
+    <div class="card">
+      <h4>Gordão U.S.A</h4>
       <p>Loja de roupas originais e importadas.</p>
     </div>
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Grupo EPSA - Todos os direitos reservados</p>
+<footer id="contato">
+  <p>© 2026 Grupo EPSA - Tiago Santos</p>
 </footer>
 
-<a href="https://wa.me/5511985662625" target="_blank" class="whatsapp-btn">
+<a class="whatsapp" href="https://wa.me/5511985662625" target="_blank">
   WhatsApp
 </a>
 
